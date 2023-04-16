@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/main.js"></script>
+  </head>
+  <body>
+    <!-- main heading of the page -->
+    <header>
+      <h2 class="textCenter">Student Enrollment Form</h2>
+    </header>
+
+    <div class="container">
+
+      <!-- enrollForm container -->
+      <div class="enrollForm">
+
+        <form onsubmit="event.preventDefault();studentDetails(this);">
+
+            <!-- name section -->
+          <div class="formGroup">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+           
+          <!-- email section -->
+          <div class="formGroup">
+            <label for="email">Email </label>
+            <input type="text" id="email" name="email" required />
+          </div>
+           
+          <!-- website link section -->
+          <div class="formGroup">
+            <label for="website">Website</label>
+            <input type="url" id="website" name="website" required />
+          </div>
+
+          <!-- img link section -->
+          <div class="formGroup">
+            <label for="imgLink">Image link</label>
+            <input type="url" id="imgLink" name="imgLink" required />
+          </div>
+           
+
+          <!-- gender group section -->
+          <div class="formGroup">
+            <div>Gender</div>
+
+            <div>
+              <input type="radio" id="male" name="gender" value="male" />
+              <label for="male">Male</label>
+              <br />
+              <input type="radio" id="female" name="gender" value="female" />
+              <label for="female">Female</label>
+            </div>
+          </div>
+          
+          <!-- skills group section -->
+          <div class="formGroup">
+            <div>Skills</div>
+
+            <div class="skillSec">
+              <div>
+                <input type="checkbox" id="java" name="Skills" value="java" />
+                <label for="java">Java</label>
+              </div>
+
+              <div>
+                <input
+                  type="checkbox"
+                  id="html"
+                  class="ml"
+                  name="Skills"
+                  value="html"
+                />
+                <label for="html">HTML</label>
+              </div>
+
+              <div>
+                <input
+                  type="checkbox"
+                  id="css"
+                  class="ml"
+                  name="Skills"
+                  value="css"
+                />
+                <label for="css">CSS</label>
+              </div>
+            </div>
+          </div>
+           
+          <!-- enroll and reset btn group -->
+          <div class="btnGroup">
+            <input type="submit" value="Enroll Student" class="btn blue" />
+            <input type="reset" value="Clear" class="btn red" />
+          </div>
+
+        </form>
+      </div>
+
+      <!-- enrollform and enrolled container seprator -->
+
+      <div class="hr"></div>
+
+
+      <!-- enrolled Students container -->
+      <div class="enrolledStudent">
+        <h2 class="textCenter">Enrolled Students</h2>
+        <table id="table">
+          <thead>
+            <tr>
+              <th>Description</th>
+              <th>Image</th>
+            </tr>
+          </thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+
+    </div>
+  </body>
+</html>
